@@ -1,0 +1,5 @@
+Design and code a program that reads a text file, and counts the number of times each word that it contains appears.
+The code you write should handle various scenarios, such as case sensitivity and ignoring punctuation.
+For instance, words like 'Design', 'design', and 'DESIGN' should be considered the same word.
+This test file also includes some trivial words such as 'and', 'the', 'it', and 'a', which should be ignored.
+Another thing to note is that numbers like 100 or 123 should not be counted as words.
