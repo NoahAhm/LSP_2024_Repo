@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="libs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/org/howard/edu/lsp/assignment6/libs/junit-jupiter-engine-5.7.0-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org/howard/edu/lsp/assignment6/libs/junit-jupiter-api-5.7.0-javadoc.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
