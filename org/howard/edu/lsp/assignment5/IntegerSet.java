@@ -1,8 +1,8 @@
 package org.howard.edu.lsp.assignment5;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Collections;
+import java.util.List;
 
 /**
  * A class representing a set of integers with various set operations.
@@ -155,8 +155,10 @@ public class IntegerSet  {
      * 
      * @param intSetb the universal set to compare with
      */
-    public void complement(IntegerSet intSetb) {
-        intSetb.set.removeAll(this.set);
+    public void complement(IntegerSet universalSet) {
+        List<Integer> complementSet = new ArrayList<>(universalSet.set);
+        complementSet.removeAll(this.set);
+        this.set = complementSet;
     }
 
     // Returns true if the set is empty, false otherwise. 5 pts.

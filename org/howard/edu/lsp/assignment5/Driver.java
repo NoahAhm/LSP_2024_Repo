@@ -43,5 +43,21 @@ public class Driver {
         // Testing clear
         set1.clear();
         System.out.println("After clearing Set 1: " + set1.toString());
+
+        // Testing complement
+        IntegerSet universalSet = new IntegerSet();
+        for (int i = 1; i <= 10; i++) {
+            universalSet.add(i);  // Universal set contains elements from 1 to 10
+        }
+
+        System.out.println("Universal Set: " + universalSet.toString());
+        
+        set1.add(2);
+        set1.add(3);
+        set1.add(5);
+        System.out.println("Set 1 before complement: " + set1.toString());
+
+        set1.complement(universalSet);
+        System.out.println("Complement of Set 1 with respect to Universal Set: " + set1.toString());
     }
 }

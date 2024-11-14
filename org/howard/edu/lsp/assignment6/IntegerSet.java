@@ -154,8 +154,8 @@ public class IntegerSet  {
      * 
      * @param intSetb the universal set to compare with
      */
-    public void complement(IntegerSet intSetb) {
-        List<Integer> complementSet = new ArrayList<>(intSetb.set);
+    public void complement(IntegerSet universalSet) {
+        List<Integer> complementSet = new ArrayList<>(universalSet.set);
         complementSet.removeAll(this.set);
         this.set = complementSet;
     }

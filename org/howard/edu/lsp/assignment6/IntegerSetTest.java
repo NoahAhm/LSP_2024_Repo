@@ -178,6 +178,40 @@ class IntegerSetTest {
         set.clear();
         assertEquals("[]", set.toString(), "Empty set should be represented as []");
     }
+
+    @Test
+    @DisplayName("Test case for complement()")
+    void testComplement() {
+        IntegerSet universalSet = new IntegerSet();
+        for (int i = 1; i <= 10; i++) {
+            universalSet.add(i);  // Universal set contains elements from 1 to 10
+        }
+
+        IntegerSet set = new IntegerSet();
+        set.add(2);
+        set.add(3);
+        set.add(5);
+
+        // Complement of `set` with respect to `universalSet`
+        set.complement(universalSet);
+
+        // Expected complement should be [1, 4, 6, 7, 8, 9, 10]
+        assertTrue(set.contains(1), "Complement should contain 1");
+        assertTrue(set.contains(4), "Complement should contain 4");
+        assertTrue(set.contains(6), "Complement should contain 6");
+        assertTrue(set.contains(7), "Complement should contain 7");
+        assertTrue(set.contains(8), "Complement should contain 8");
+        assertTrue(set.contains(9), "Complement should contain 9");
+        assertTrue(set.contains(10), "Complement should contain 10");
+
+        assertFalse(set.contains(2), "Complement should not contain 2");
+        assertFalse(set.contains(3), "Complement should not contain 3");
+        assertFalse(set.contains(5), "Complement should not contain 5");
+
+        // Verify that the complement has the expected elements
+        assertEquals(7, set.length(), "Complement should have 7 elements");
+    }
+
 }
 
 /*
